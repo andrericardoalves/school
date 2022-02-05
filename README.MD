@@ -1,5 +1,8 @@
 This project was created from the archetype "wildfly-jakartaee-ear-archetype".
 
+To Create Database with Liquidbase:
+Run the "mvn liquibase:update" in project "school-ejb"
+
 To deploy it:
 Run the maven goals "install wildfly:deploy"
 

@@ -81,6 +81,27 @@
     </dependencies>
 
     <build>
+    
+    <pluginManagement>
+			<plugins>
+				<plugin>
+					<groupId>org.liquibase</groupId>
+					<artifactId>liquibase-maven-plugin</artifactId>
+					<version>4.2.0</version>
+					<configuration>
+						<propertyFile>src/main/resources/liquidbase/liquibase.properties</propertyFile>
+					</configuration>
+					<dependencies>
+						<dependency>
+							<groupId>org.postgresql</groupId>
+							<artifactId>postgresql</artifactId>
+							<version>9.4.1212</version>
+						</dependency>
+					</dependencies>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+		
         <!-- Tell Maven that the resulting file should not have a file name containing the version - 
 		     a non versioned name is required e.g. when building a deployable artifact using the ShrinkWrap API -->
         <finalName>${project.artifactId}</finalName>
