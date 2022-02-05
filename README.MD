@@ -1,7 +1,11 @@
 This project was created from the archetype "wildfly-jakartaee-ear-archetype".
 
 To Create Database with Liquidbase:
-Run the "mvn liquibase:update" in project "school-ejb"
+ Run the docker-compose up --build
+ Run the "mvn liquibase:update" in project "school-ejb"
+
+To Create Datasource:
+In folder "datasource" on file "HowToConfigureWildflyDatasource" follow step-by-step.  
 
 To deploy it:
 Run the maven goals "install wildfly:deploy"
@@ -9,22 +13,20 @@ Run the maven goals "install wildfly:deploy"
 To undeploy it:
 Run the maven goals "wildfly:undeploy"
 
-==========================
 
 DataSource:
 This sample includes a "persistence.xml" file in the EJB project. This file defines
-a persistence unit "schoolPersistenceUnit" which uses the JakartaEE default database.
+a persistence unit "schoolPU" which uses the JakartaEE default database.
 
 In production environment, you should define a database in WildFly config and point to this database
 in "persistence.xml".
 
 >If you don't use entity beans, you can delete "persistence.xml".
-==========================
 
 JSF:
 The web application is prepared for JSF 2.3 by bundling an empty "faces-config.xml" in "src/main/webapp/WEB-INF".
 > In case you don't want to use JSF, simply delete this file and "src/main/webapp/beans.xml" and "src/main/java/com/alves/school/Jsf23Activator.java"
-==========================
+
 
 Testing:
 This sample is prepared for running unit tests with the Arquillian framework.
