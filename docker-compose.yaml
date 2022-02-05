@@ -1,0 +1,26 @@
+version: '3.4'
+
+services:
+  database:
+    image: postgres:9
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: My01pass
+      POSTGRES_DB: school
+  #wildfly:
+  #  image: docker.io/bitnami/wildfly:25
+  #  ports:
+  #    - '8081:8080'
+  #    - '9991:9990'
+  #  environment:
+  #    - WILDFLY_PASSWORD=password
+  command-line:
+    image: maven:3-openjdk-11
+    command: tail -f /dev/null
+    links: 
+      - database
+   #   - wildfly
+    volumes:
+      - ..:/workspace
