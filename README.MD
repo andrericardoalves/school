@@ -18,12 +18,12 @@ a persistence unit "schoolPersistenceUnit" which uses the JakartaEE default data
 In production environment, you should define a database in WildFly config and point to this database
 in "persistence.xml".
 
-If you don't use entity beans, you can delete "persistence.xml".
+>If you don't use entity beans, you can delete "persistence.xml".
 ==========================
 
 JSF:
 The web application is prepared for JSF 2.3 by bundling an empty "faces-config.xml" in "src/main/webapp/WEB-INF".
-In case you don't want to use JSF, simply delete this file and "src/main/webapp/beans.xml" and "src/main/java/com/alves/school/Jsf23Activator.java"
+> In case you don't want to use JSF, simply delete this file and "src/main/webapp/beans.xml" and "src/main/java/com/alves/school/Jsf23Activator.java"
 ==========================
 
 Testing:
