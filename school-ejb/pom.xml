@@ -78,6 +78,18 @@
             <artifactId>jboss-annotations-api_1.3_spec</artifactId>
             <scope>provided</scope>
         </dependency>
+        
+        <dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<scope>provided</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.postgresql</groupId>
+			<artifactId>postgresql</artifactId>
+		</dependency>
+		
     </dependencies>
 
     <build>

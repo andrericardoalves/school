@@ -1,0 +1,15 @@
+ docker ps -a
+docker exec -it 88b64e3ed379  /bin/bash
+psql -d school -U  postgres -W
+
+List available databases
+\l
+
+List available tables
+\dt
+
+Describe a table
+\d table_name
+
+List available schema
+\dn
